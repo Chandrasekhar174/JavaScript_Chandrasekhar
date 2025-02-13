@@ -39,9 +39,9 @@ fs.createReadStream(path.join(__dirname, '../data/matches.csv'))
       JSON.stringify(topPlayers, null, 2)
     );
 
-    console.log("✅ Top Player for Each Season saved successfully!");
+    console.log("Top Player for Each Season saved successfully!");
     console.log(topPlayers);
   })
   .on('error', (err) => {
-    console.error('❌ Error reading CSV:', err);
+    console.error('Error reading CSV:', err);
   });

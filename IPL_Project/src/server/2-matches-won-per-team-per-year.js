@@ -10,7 +10,9 @@ fs.createReadStream(path.join(__dirname, '../data/matches.csv'))
     const year = row.season;
     const winner = row.winner;
 
-    if (!matchesWonPerYear[year]) matchesWonPerYear[year] = {};
+    if (!matchesWonPerYear[year]) 
+      matchesWonPerYear[year] = {};
+    
     matchesWonPerYear[year][winner] = (matchesWonPerYear[year][winner] || 0) + 1;
   })
   .on('end', () => {

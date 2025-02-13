@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const csv = require('csv-parser');
+const fs = require('fs'); // used for import file system 
+const path = require('path'); // import path module
+const csv = require('csv-parser'); // read csv file
 
 const matchesPerYear = {};
 
@@ -13,7 +13,7 @@ fs.createReadStream(path.join(__dirname, '../data/matches.csv'))
   .on('end', () => {
     fs.writeFileSync(
       path.join(__dirname, '../public/output/matchesPerYear.json'),
-      JSON.stringify(matchesPerYear, null, 2)
+      JSON.stringify(matchesPerYear, null, 5)
     );
     console.log('Matches per year calculation complete!');
   });
