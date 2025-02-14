@@ -5,10 +5,11 @@ const csv = require('csv-parser');
 const matches = [];
 const bowlersData = {};
 
+
 fs.createReadStream(path.join(__dirname, '../data/matches.csv'))
   .pipe(csv())
   .on('data', (row) => {
-    if (row.season === '2016') {
+    if (row.season === '2015') {
       matches.push(row.id);
     }
   })
@@ -37,6 +38,6 @@ fs.createReadStream(path.join(__dirname, '../data/matches.csv'))
           path.join(__dirname, '../public/output/economicalBowlers2015.json'),
           JSON.stringify(bowlersEconomy.slice(0, 10), null, 2)
         );
-        console.log('Top 10 economical bowlers in 2016 calculated!');
+        console.log(bowlersData);
       });
   });
