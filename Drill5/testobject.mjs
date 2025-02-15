@@ -58,8 +58,6 @@ function pairs(obj) {
   return pairs;
 
 }
-
-
 /* STRETCH PROBLEMS */
 
 function invert(obj) {

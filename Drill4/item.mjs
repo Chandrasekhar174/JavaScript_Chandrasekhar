@@ -106,7 +106,6 @@ function flatten(elements) {
   }
   return arr;
 }
-
 export{
   each,
   map,
