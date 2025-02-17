@@ -79,7 +79,7 @@ function sortContent()
         }
         const newData=data;
         const regex=/\./;
-        const newDatas=newData.split(regex).sort().join("\n");
+        const newDatas=newData.split(regex).sort().join(".\n");
         fs.writeFile("../filenames1.txt",newDatas.toString(),(err)=>{
             if(err)
             {
@@ -110,14 +110,13 @@ function deleteFile()
                     
                 }
                 else{
-                    console.log("Deleted file");
+                    console.log("file Deleted");
                     
                 }
             })
         }
     })
 }
-
 // deleteFile();
 
 module.exports={readFile,convertToLowerCase,convertToUpperCaseFile,sortContent,deleteFile};
