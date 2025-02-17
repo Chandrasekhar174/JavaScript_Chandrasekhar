@@ -6,22 +6,41 @@
 */
 
 const fs= require("fs");
+const { findSourceMap } = require("module");
 
-for(let i=1;i<=10;i++)
+function createFolder()
 {
-    const file=`./JSON/file${i}.json`;
-    fs.writeFile(file,`file${i}`,(err)=>{
-        if(err)
-        {
-            console.log(err);
-            
-        }
-        else{
-            console.log("file created");
-            
-        }
+  for(let i=1;i<=10;i++)
+  {
+    setTimeout(()=>{
+        fs.mkdir("../JSON_Random",(err,successfully)=>{
+            if(err)
+            {
+                console.log("ERROR :",err);
+            }
+            else{
+                console.log("Successfully created ",successfully);
+                
+            }
+        })
+    },2000)
+  }
+}
+function deleteDiroctory()
+{
+  setTimeout(()=>{
+    fs.rmdir("../JSON_Random",(err)=>{
+      if(err)
+      {
+        console.log(err);
+      }
+      else{
+        console.log("Successfully Deleted");
+        
+      }
     })
+  },3000)
 }
 
-
+module.exports={createFolder,deleteDiroctory};
 
