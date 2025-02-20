@@ -1,7 +1,4 @@
-const { resolve } = require("path/win32")
-
-const {default: fs}=await import("fs")
-
+const {default: fs}=await import("fs/promises")
 /* Problem 1:
     
     Using promises and the fs module's asynchronous functions, do the following:
@@ -9,13 +6,45 @@ const {default: fs}=await import("fs")
         2. Delete those files simultaneously 
 */
 
-function createDir()
+export function createDirwithFile()
 {
-    fs.mkdir("./JSONFile",(err)=>{
-        if(err)
+    fs.mkdir("../JSONFile")
+    .then(()=>{
+        console.log("file created successfully");
+        for(let i=1;i<=10;i++)
         {
-            resolve(err);
+           fs.writeFile(`../JSONFile/file${i}.json`,`This is file${i}`)
+           .then(()=>{
+            console.log(`File${i} Created `);
+            
+           })
+           .catch((err)=>{
+            console.log(err);
+           })
         }
-
+    })
+    .catch((err)=>{
+        console.log(err);
+        return;
     })
 }
+
+export function deleteFile()
+{
+
+   for(let i=1;i<=10;i++)
+   {
+        fs.unlink(`../JSONFile/file${i}.json`)
+        .then(()=>{
+            console.log(`file${i} deleted successfully`);
+            
+        })
+        .catch((err)=>{
+            console.log(err);
+            
+        })
+   }
+   
+}
+
+export default fs;
