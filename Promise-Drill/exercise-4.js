@@ -11,20 +11,14 @@
     HINT2: You can Google for something like:
            "resolve 2 promises at the same time javascript"
 */
-const {default:fs}=await import("fs/promises")
-
-function promise1()
-{
-    
-}
-// const promise1=new Promise((resolve)=>{
-//     setTimeout(()=>{
-//         resolve(10)
-//     },3000)
-// })
-// const promise2=new Promise((resolve)=>{
-//     setTimeout(()=>{
-//         resolve(20)
-//     },20000)
-// })
+const promise1=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve(10)
+    },3000)
+})
+const promise2=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve(20)
+    },20000)
+})
 Promise.all([promise1,promise2]).then((value)=>console.log(value.reduce((acc,curr)=>acc+curr,0)));

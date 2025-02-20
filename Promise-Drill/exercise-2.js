@@ -14,3 +14,22 @@
     HINT: Use setTimeout for the delay
 */
 
+
+function createPromise()
+{
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         resolve();
+      },3000)
+   })
+}
+console.log("Program started");
+createPromise().then(()=>{
+   console.log("Step 1 completed");
+   return createPromise();
+   }).then(()=>{
+      console.log("Step 2 completed");
+   })
+console.log("Program in progress...");
+
+

@@ -30,6 +30,28 @@
     BONUS: WHY does it work this way?
 */
 
+function createPromise(timer)
+{
+   return new Promise((resolve,reject)=>{
+      setTimeout(() => {
+         resolve({data:"Hello, friend!",error:null})
+      }, timer);
+   })
+}
+
+console.log("Program started");
+console.log("Program in progress...");
+createPromise(5000).then((value)=>{
+   console.log(value);
+   return createPromise(2000);
+}).then(()=>{
+   console.log("First promise chain completed");
+   return createPromise(10000)
+}).then(()=>{
+   console.log("Second promise chain completed");
+   
+})
+
 
 
 
