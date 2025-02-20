@@ -22,4 +22,3 @@ simplePromise1().then(()=>{
     console.log("Program complete");
 });
 console.log("Program in progress...");
-
