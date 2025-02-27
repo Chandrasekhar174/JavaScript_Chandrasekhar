@@ -1,0 +1,69 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            /* margin:; */
+            position: relative;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            position: relative;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            background: #ddd;
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #000;
+        }
+        .line {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 100%;
+            height: 4px;
+            background: #ddd;
+            z-index: 1;
+        }
+        .content {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            margin-left: 450px;
+            width: 400px;
+            justify-content: space-between;
+
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: rgb(187, 186, 186);
+            color:black;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
