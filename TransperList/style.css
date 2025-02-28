@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Single box with only left, right, and bottom border */
+.main-box {
+    width: 600px;
+    margin: auto;
+    border:1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex container for lists and buttons */
+.transfer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* List boxes */
+.list-box {
+    width: 200px;
+    padding: 10px;
+    min-height: 150px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-box li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Buttons Box */
+.buttons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    width: 40px;
+}
+
+button:hover {
+    background: #ddd;
+}

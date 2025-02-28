@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="srcipt.js" defer></script>
+</head>
+<body>
+
+    <h2>Transfer List</h2>
+
+    <div class="main-box">
+        <div class="transfer-list">
+            <!-- Left List -->
+            <div class="list-box">
+                <ul id="left-list">
+                    <li><input type="checkbox" value="JS"> JS</li>
+                    <li><input type="checkbox" value="HTML"> HTML</li>
+                    <li><input type="checkbox" value="CSS"> CSS</li>
+                    <li><input type="checkbox" value="TS"> TS</li>
+                </ul>
+            </div>
+
+            <div class="buttons-box">
+                <button onclick="moveAll('left')" id="btn1">&lt;&lt;</button>
+                <button onclick="moveSelected('left')" id="btn2">&lt;</button>
+                <button onclick="moveSelected('right')" id="btn3">&gt;</button>
+                <button onclick="moveAll('right')" id="btn4">&gt;&gt;</button>
+            </div>
+
+            <div class="list-box">
+                <ul id="right-list">
+                    <li><input type="checkbox" value="React"> React</li>
+                    <li><input type="checkbox" value="Angular"> Angular</li>
+                    <li><input type="checkbox" value="Vue"> Vue</li>
+                    <li><input type="checkbox" value="Svelte"> Svelte</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
