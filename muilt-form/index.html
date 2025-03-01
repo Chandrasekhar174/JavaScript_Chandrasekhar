@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi-form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="w-full h-screen bg-blue-200 flex justify-center items-center h-screen">
+    <div class="fixed w-[70%] h-[65%] bg-white rounded-md">
+        <img class="m-4" src="./images/bg.svg">
+        <div class="fixed top-[25%] left-[18%] flex flex-col gap-6">
+            <div class="w-50 flex gap-4">
+                <button class="w-8 h-8 border flex items-center justify-center text-white bg-transparent border-white rounded-full">1</button>
+                <div class="w-[150px] gap-4">
+                    <p class="text-sm text-gray-300 text-opacity-70">STEP 1</p>
+                    <p class="font-ubuntu font-bold text-md text-white" >YOUR INFO</p>
+                </div>
+            </div>
+            <div class="w-50 flex gap-4">
+                <button class="w-8 h-8 border flex items-center justify-center text-white bg-transparent border-white rounded-full">2</button>
+                <div class="w-[150px]">
+                    <p class="text-sm text-gray-300 text-opacity-70">STEP 2</p>
+                    <p class="font-ubuntu font-bold text-md text-white" >SELECT PLAN</p>
+                </div>
+            </div>
+            <div class="w-50 flex gap-4">
+                <button class="w-8 h-8 border flex items-center justify-center text-white bg-transparent border-white rounded-full">3</button>
+                <div class="w-[150px]">
+                    <p class="text-sm text-gray-300 text-opacity-70">STEP 3</p>
+                    <p class="font-ubuntu font-bold text-md text-white" >ADD-ONS</p>
+                </div>
+            </div>
+            <div class="w-50 flex gap-4">
+                <button class="w-8 h-8 border flex items-center justify-center text-white bg-transparent border-white rounded-full">4</button>
+                <div class="w-[150px]">
+                    <p class="text-sm text-gray-300 text-opacity-70">STEP 4</p>
+                    <p class="font-ubuntu font-bold text-md text-white" >SUMMARY</p>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------------------------Step1 ---------------------------------- -->
+
+
+        <!-- <div class="fixed top-[20%] left-[42%]">
+            <h2 class="font-ubuntu font-bold text-2xl opacity-75">Personal info</h2>
+            <p class="font-ubuntu opacity-50 text-sm mt-[10px]">Please provide your name,email address, and phone number.</p>
+            <form>
+                <div>
+                    <p class="font-ubuntu font-bold opacity-75 text-sm mt-[20px]">Name</p>
+                    <label for="name"></label>
+                    <input id="name" type="text" placeholder="e.g chandrasekhar sahu " class="p-[10px] mt-[10px] w-[500px] border rounded-[10px]">
+                </div>
+                <div>
+                    <p class="font-ubuntu font-bold opacity-75 text-sm mt-[20px]">Email Address</p>
+                    <label for="Email"></label>
+                    <input id="Email" type="text" placeholder="e.g chandrasekharsahu@123.gmail.com" class="p-[10px] mt-[10px] w-[500px] border rounded-[10px]">
+                </div>
+                <div>
+                    <p class="font-ubuntu font-bold opacity-75 text-sm mt-[20px]">Phone Number</p>
+                    <label for="number"></label>
+                    <input id="number" type="text" placeholder="e.g +91 9129938283" class="p-[10px] mt-[10px] w-[500px] border rounded-[10px]">
+                </div>
+            </form>
+            <button class="fixed top-[73%] font-ubuntu font-[500] left-[65%] border p-[10px] rounded-[10px] w-[150px] bg-[hsl(213,96%,18%)] text-white">Next Step</button>
+        </div> -->
+
+
+        <!-- ------------------------------------- Step2 -------------------------------------------------------------------------- -->
+
+        <div class="fixed top-[25%] left-[42%]">
+            <h2 class="font-ubuntu font-bold text-2xl opacity-75">Select your plan</h2>
+            <p class="font-ubuntu opacity-50 text-sm mt-[10px]">You have the option of monthly or yearly billing.</p>
+            <div class="flex gap-[20px] mt-[40px]">
+                <div class="border rounded-[15px] w-[130px] h-[165px] p-[20px]">
+                    <button class="cursor-pointer">
+                        <img src="./images/icon-arcade.svg" class="mb-[30px]">
+                        <div class="font-ubuntu">
+                            <p class="font-bold opacity-75">Arcade</p>
+                            <p class="text-sm text-gray-400" >$9/mo</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="border rounded-[15px] w-[130px] h-[165px] p-[20px]">
+                    <button class="cursor-pointer">
+                        <img src="./images/icon-advanced.svg" class="mb-[30px]">
+                        <div class="font-ubuntu">
+                            <p class="font-bold opacity-75">Advanced</p>
+                            <p class="text-sm text-gray-400">$12/mo</p>
+                        </div>
+                    </button>
+                </div>
+                <div class="border rounded-[15px] w-[130px] h-[165px] p-[20px]">
+                    <button class="cursor-pointer">
+                        <img src="./images/icon-pro.svg" class="mb-[30px]">
+                        <div class="font-ubuntu">
+                            <p class="font-bold opacity-75">Pro</p>
+                            <p class="text-sm text-gray-400">$15/mo</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class=" bg-[hsl(229,24%,87%)] bg-opacity-10 flex border justify-center items-center mt-[20px] pt-[10px] pb-[10px] gap-[20px] rounded ">
+                <p class="font-ubuntu font-bold opacity-75">Monthly</p>
+                <div class="relative inline-block w-11 h-5">
+                    <input checked id="switch-component-blue" type="checkbox" class="peer appearance-none w-11 h-5 bg-slate-100 rounded-full checked:bg-blue-600 cursor-pointer transition-colors duration-300" />
+                    <label for="switch-component-blue" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform peer-checked:translate-x-6 peer-checked:border-blue-600 cursor-pointer">
+                    </label>
+                </div>
+                <p class="font-bold opacity-25">Yearly</p>
+            </div>
+            <button class="fixed top-[73%] font-ubuntu font-[500] p-[10px] w-[150px] opacity-50">Go Back</button>
+            <button class="fixed top-[73%] font-ubuntu font-[500] left-[65%] border p-[10px] rounded-[10px] w-[150px] bg-[hsl(213,96%,18%)] text-white">Next Step</button>
+        </div>
+    </div>
+</body>
+</html>
